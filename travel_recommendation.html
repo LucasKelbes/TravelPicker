@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Picker</title>
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+}
+
+    body {
+      background-image: url('travelpic.jpg');
+      background-size: cover; 
+      background-attachment: fixed;
+      background-color: #a0a0a0; 
+    }
+    .header-container {
+      display: flex;        
+      top: 0;
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 10px;
+      background-color: #f0f0f0; 
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 15px; 
+        margin-left: auto;
+        margin-right: auto;
+        flex-shrink: 0; 
+    }
+
+    .logo {
+        flex-shrink: 0; 
+    }
+
+    .search-form {
+        display: flex; 
+        gap: 5px;     
+        flex-shrink: 0;
+    }
+
+    .header-container input, 
+    .header-container button {
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .mainText{
+        padding-left: 50px;
+        padding-top: 50px;
+        line-height: 1.2;
+        font-size: 70px;
+        font-family: "Times New Roman", serif;
+        color: #FFFFFF;
+    }
+    .underMainText{
+        line-height: 1.5;
+        padding-left: 50px;
+        width: 275px; 
+        overflow-wrap: break-all;
+        font-family: "Times New Roman", serif;
+        font-size: 17px;
+        color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+   
+    <div class="header-container">
+        <div class="logo">
+            <a href="url" style="text-decoration: none; font-weight: bold; font-size: 1.5em; color: #333;">Travel Picker</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="url">Home</a>
+            <a href="url">About us</a>
+            <a href="url">Contact Us</a> 
+        </nav>
+        
+        <form class="search-form" action="/search" method="get">
+            <input type="search" id="query" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+            <button type="button" onclick="document.getElementById('query').value=''">Clear</button>
+        </form>
+    </div>
+
+
+    <div class"home_page_text">
+        <h1 class="mainText"> Explore<br>Dream<br>Destination</h1>
+        <p class="underMainText"> It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites the sense of wonder.</p>
+    </div>
+    
+</body>
+</html>
