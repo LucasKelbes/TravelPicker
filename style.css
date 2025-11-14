@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('travelpic.jpg');
+  background-size: cover; 
+  background-attachment: fixed;
+  background-color: #a0a0a0; 
+}
+
+.header-container {
+  display: flex;        
+  top: 0;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px;
+  background-color: #f0f0f0; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; 
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0; 
+}
+
+.logo {
+    flex-shrink: 0; 
+}
+
+.search-form {
+    display: flex; 
+    gap: 5px;     
+    flex-shrink: 0;
+}
+
+.header-container input, 
+.header-container button {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.mainText{
+    padding-left: 50px;
+    padding-top: 50px;
+    line-height: 1.2;
+    font-size: 70px;
+    font-family: "Times New Roman", serif;
+    color: #FFFFFF;
+}
+
+.underMainText{
+    line-height: 1.5;
+    padding-left: 50px;
+    width: 275px; 
+    overflow-wrap: break-all;
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+/* This is where about page css is */
+
+.AboutUs{
+    margin-left: 200px;
+    padding-top: 35px;
+    font-size: 90px;
+    font-family: Arial;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.about_page_bg{
+    z-index: 1000;
+    background-color: rgba(151, 151, 151, 0.65);
+    width: 1200px;
+    color: white;
+    margin-left: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family:Trebuchet;
+    line-height: 1.6;
+}
+.underAboutText{
+    line-height: 1.5;
+    padding-left: 50px;
+    width: 850px; 
+    overflow-wrap: break-all;
+    font-family:Georgia;
+    font-size: 17px;
+    padding-left: 50px;
+}
+/*ourteam part of about*/
+.ourTeamSection {
+    display: flex;             
+    align-items: center;     
+    gap: 40px;    
+    min-width: 150px;            
+    
+}
+.ourTeamSection h1{
+    margin-left: 300px;
+    margin-top: 100px;
+    color: white;
+    line-height: 1.2;
+    font-family:Arial;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.card-container {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    margin-left: 200px;
+  }
+  
+  .card {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    padding: 20px;
+    text-align: center; 
+  }
+  
+  .card h3 {
+    color: #333333; 
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #666666; 
+    line-height: 1.5;
+  }
