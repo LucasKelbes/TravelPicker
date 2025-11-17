@@ -176,6 +176,7 @@ body {
     grid-template-columns: 1fr auto 1fr;
     gap: 20px;
     display:grid;
+    
   }
   .contactPageTxt{
     grid-column: 1;
@@ -193,5 +194,14 @@ body {
     font-family: 'Courier New', Courier, monospace;
   }
   .contactInputArea{
+    background-color: #666666;
+    opacity: .8;
     grid-column: 3;
+    padding-left: 35px;
+    display: flex;
+  }
+  .contactInputArea input, textarea{
+    width: 100%;
+    box-sizing: border-box;
+
   }
