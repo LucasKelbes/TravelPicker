@@ -167,5 +167,31 @@ body {
     line-height: 1.5;
   }
 
-  /* contact us page */
+  /* contact Us starts here*/
   
+
+  .contactpage{
+    padding:200px;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    display:grid;
+  }
+  .contactPageTxt{
+    grid-column: 1;
+  }
+
+  .contactPageTxt h1{
+    grid-column: 1;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .contactPageTxt p{
+    grid-column: 1;
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .contactInputArea{
+    grid-column: 3;
+  }
