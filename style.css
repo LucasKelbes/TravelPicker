@@ -4,37 +4,45 @@ html, body {
 }
 
 body {
-  background-image: url('travelpic.jpg');
+  background-image: url('cityscape2.jpg');
   background-size: cover; 
   background-attachment: fixed;
   background-color: #a0a0a0; 
 }
 
 .header-container {
-  display: flex;        
-  top: 0;
-  justify-content: space-between; 
-  align-items: center; 
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left 1fr, center auto, right 1fr */
+  align-items: center;
   padding: 10px;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
+  opacity: .75;
 }
 
 .nav-links {
-    display: flex;
-    gap: 15px; 
-    margin-left: auto;
-    margin-right: auto;
-    flex-shrink: 0; 
+  grid-column: 2;        /* center */
+  display: flex;
+  gap: 15px;
+  justify-content: center; 
 }
-
+.nav-links a{
+    text-decoration: none;
+    color:#0F0F0F;
+}
 .logo {
-    flex-shrink: 0; 
-}
+    grid-column: 1;        /* left */
+    justify-self: start;
+  }
 
 .search-form {
-    display: flex; 
-    gap: 5px;     
-    flex-shrink: 0;
+  grid-column: 3;      
+  display: flex;
+  gap: 5px;
+  justify-self: end;  
+}
+.search-form input{
+    border-radius: 25px;
+    width: 200px;
 }
 
 .header-container input, 
@@ -47,6 +55,7 @@ body {
     padding-left: 50px;
     padding-top: 50px;
     line-height: 1.2;
+    margin-left: 50px;
     font-size: 70px;
     font-family: "Times New Roman", serif;
     color: #FFFFFF;
@@ -55,6 +64,7 @@ body {
 .underMainText{
     line-height: 1.5;
     padding-left: 50px;
+    margin-left: 50px;
     width: 275px; 
     overflow-wrap: break-all;
     font-family: "Times New Roman", serif;
@@ -118,22 +128,44 @@ body {
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     padding: 20px;
-    margin-left: 200px;
+    margin-left: 30px;
   }
   
   .card {
-    background-color: #ffffff; 
+    background-color: #D3D3D3; 
+    opacity: .95;
     border-radius: 8px; 
     padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center; 
+  }
+  .titlebox{
+    background-color:#0F52BA ;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    border-radius: 15px;
+
+  }
+  .titlebox h5{
+    font-weight: bold;
+    color:#FFFFFF;
+
+
   }
   
   .card h3 {
-    color: #333333; 
-    margin-bottom: 10px;
+    color: #FAFCF8; 
+    text-shadow: 2px 2px #666666;
+    font-weight: bold;
+    margin-bottom: 7px;
   }
   
   .card p {
     color: #666666; 
     line-height: 1.5;
   }
+
+  /* contact us page */
+  

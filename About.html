@@ -17,6 +17,11 @@
             <a href="Contact.html">Contact Us</a> 
         </nav>
         
+        <form class="search-form" action="/search" method="get">
+            <input type="search" id="query" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+            <button type="button" onclick="document.getElementById('query').value=''">Clear</button>
+        </form>
     </div>
 
 
@@ -36,14 +41,23 @@
                 <div class="card">
                   <h3>John Doe</h3>
                   <p>John is responsible <br> for...</p>
+                  <div class="titlebox">
+                    <h5>CEO</h5>
+                  </div>
                 </div>
                 <div class="card">
                   <h3>Celina Thomas</h3>
                   <p>Celina Thomas is responsible<br>for...</p>
+                  <div class="titlebox">
+                    <h5>Team Lead</h5>
+                  </div>
                 </div>
                 <div class="card">
                   <h3>Mike Tyson</h3>
                   <p>Mike Tyson is responsible<br>for...</p>
+                  <div class="titlebox">
+                    <h5>Delivery Head</h5>
+                  </div>
                 </div>
               </div>
         </div>
