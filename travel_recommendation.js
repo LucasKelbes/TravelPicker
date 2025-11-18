@@ -40,7 +40,7 @@ async function fetchJsonData() {
     const searchTerm = searchField.value.trim().toLowerCase(); 
 
     if (searchTerm === "") {
-        displayResults([{name: "Input Required", description: 'Please enter a key term (e.g., "beach", "temple", "country", or specific location name).', imageUrl: ''}]);
+        displayResults([{name: "Input Required", description: 'Please enter "beach", "temple", or "country".', imageUrl: ''}]);
         return; 
     }
 
@@ -49,41 +49,26 @@ async function fetchJsonData() {
         return;
     }
 
-    // Call the combined filter function directly
-    filterAndDisplayData(searchTerm);
+    filterData(searchTerm);
   });
 
-// Renamed and combined the filter logic into one central function
-function filterAndDisplayData(keyword){
+  function filterData(keyword){
     let filteredResults = [];
     
-    // Check Beaches
-    if (allTravelData.beaches) {
-        filteredResults.push(...allTravelData.beaches.filter(item => {
-            return item.name.toLowerCase().includes(keyword);
-        }));
-    }
-    
-    // Check Temples
-    if (allTravelData.temples) {
-        filteredResults.push(...allTravelData.temples.filter(item => {
-            return item.name.toLowerCase().includes(keyword);
-        }));
-    }
-
-    // Check Countries/Cities
-    if (allTravelData.countries) {
+    if (keyword.includes('beach') || keyword.includes('beaches')) {
+        // Add all beaches results
+        filteredResults.push(...allTravelData.beaches);
+    } else if (keyword.includes('temple') || keyword.includes('temples')) {
+        // Add all temples results
+        filteredResults.push(...allTravelData.temples);
+    } else if (keyword.includes('country') || keyword.includes('countries')) {
+        // Add all cities from all countries
         allTravelData.countries.forEach(country => {
-            country.cities.forEach(city => {
-                // Check if the city name OR the parent country name matches the keyword
-                if (city.name.toLowerCase().includes(keyword) || country.name.toLowerCase().includes(keyword)) {
-                    // Avoid pushing duplicates if a city matches both its name and its country name
-                    if (!filteredResults.some(result => result.name === city.name)) {
-                        filteredResults.push(city);
-                    }
-                }
-            });
+            filteredResults.push(...country.cities);
         });
+    } else {
+         displayResults([{name: "Invalid Search", description: 'Search term must be "beach", "temple", or "country".', imageUrl: ''}]);
+         return;
     }
 
     displayResults(filteredResults);
@@ -102,7 +87,7 @@ function filterAndDisplayData(keyword){
                 const img = document.createElement('img');
                 img.src = item.imageUrl;
                 img.alt = item.name;
-                img.style.maxWidth = '50%'; 
+                img.style.maxWidth = '100%'; 
                 img.style.height = 'auto';
                 img.style.display = 'block';
 
