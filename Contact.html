@@ -15,12 +15,6 @@
             <a href="About.html">About us</a>
             <a href="Contact.html">Contact Us</a> 
         </nav>
-        
-        <form class="search-form" action="/search" method="get">
-            <input type="search" id="query" name="search" placeholder="Search...">
-            <button type="submit">Search</button>
-            <button type="button" onclick="document.getElementById('query').value=''">Clear</button>
-        </form>
     </div>
     
     <div class="contactpage">
@@ -40,7 +34,7 @@
                 <p><label for="messagefield">Message</label></p>
                 <textarea id="messagefield" name="messagefield" rows="5" cols="40" placeholder="enter your message"></textarea>
 
-                <input type="submit" value="Submit">
+                <button id="submit">Submit</button>
               </form>
         </div>
     </div>
